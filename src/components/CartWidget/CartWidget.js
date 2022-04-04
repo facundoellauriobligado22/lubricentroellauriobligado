@@ -1,5 +1,3 @@
-
-
 const CartWidget = () => {
     return (
         <div>
