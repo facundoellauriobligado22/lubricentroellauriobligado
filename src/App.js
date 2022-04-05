@@ -16,8 +16,8 @@ function App() {
         <NavBar />
       </header>
       <body>
-        <ItemListContainer tittle='Ellauri Obligado Facundo.'/>
-        <Counter stock={4} initial={0} onAdd={ShowTheCart}/>
+        <ItemListContainer/>
+        {/* <Counter stock={4} initial={0} onAdd={ShowTheCart}/> */}
       </body>
     </div>
   );
