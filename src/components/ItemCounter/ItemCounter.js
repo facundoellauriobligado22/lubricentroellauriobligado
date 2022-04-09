@@ -17,25 +17,25 @@ const Counter = ({ initial, stock, onAdd }) => {
     }
 
     return (
-        <div className='card container card border-warning mb-3' style={{ width: 250 }}>
-            <p style={{ textAlign: "center" }}>Aceite Elaion W40</p>
-            <hr />
-            <div className='card-body'>
-                <div className='row'>
-                    <div className='col-4 mb-3'>
-                        <button className="btn btn-primary" onClick={decrement}>-</button>
-                    </div>
-                    <div className='col-4 mb-3' >
-                        <p style={{ textAlign: "center" }}>{count}</p>
-                    </div>
-                    <div className='col-4'>
-                        <button className="btn btn-primary" style={{ align: "right" }} onClick={increment}>+</button>
-                    </div>
+        <div>
+            < div className='row' >
+                <div className='col-4 mb-3'>
+                    <button className="btn btn-primary float-start" onClick={decrement}>-</button>
                 </div>
-                <button className="btn btn-outline-primary btn-lg" onClick={() => onAdd(count)}>Agregar al carrito</button>
+                <div className='col-4 mb-3' >
+                    <p style={{ textAlign: "center" }}>{count}</p>
+                </div>
+                <div className='col-4 mb-3 '>
+                    <button className="btn btn-primary float-end" onClick={increment}>+</button>
+                </div>
+            </div >
+            <div class="d-grid gap-2">
+            <button className="btn btn-outline-primary btn-lg" onClick={() => onAdd(count)}>Agregar al carrito</button>
             </div>
         </div>
     )
 }
 
 export default Counter
+
+

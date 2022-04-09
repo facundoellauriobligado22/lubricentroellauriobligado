@@ -2,13 +2,9 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Counter from './components/ItemCounter/ItemCounter';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
-
-  const ShowTheCart = (quantity) => {
-    console.log(`Se agregaron ${quantity} productos`)
-  }
 
   return (
     <div className="Container-fluid">
@@ -17,7 +13,7 @@ function App() {
       </header>
       <body>
         <ItemListContainer/>
-        {/* <Counter stock={4} initial={0} onAdd={ShowTheCart}/> */}
+        <ItemDetailContainer/>
       </body>
     </div>
   );
