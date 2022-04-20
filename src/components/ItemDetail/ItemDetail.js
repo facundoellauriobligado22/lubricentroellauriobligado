@@ -1,18 +1,29 @@
-import { useState } from "react";
+import { useState, useContext } from "react"; /* Importamos para consumir context*/
 import Counter from "../ItemCounter/ItemCounter";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import CartContext from "../../context/CartContext"; /*Importamos la referencia*/ 
 
 
 
 
-const ItemDetail = ({ tittle, description, price, pictureUrl, stock }) => {
-    const [cantidad, setCantidad] = useState(0)
+const ItemDetail = ({ id, tittle, description, price, pictureUrl, stock }) => {
 
+    const {addItem, isInCart} = useContext(CartContext)
 
-    const ShowTheCart = (quantity) => {
+   /* const ShowTheCart = (quantity) => {
         console.log(`Se agregaron ${quantity} productos`)
         setCantidad(quantity)
-      }
+      }*/
+
+    const handleAdd = (count) =>{
+
+        const productObj = {
+            id, tittle, price
+        }
+
+        addItem({...productObj, quantity: count})
+        /*Aca solo le pasamos el objeto por props, agregando la cantidad */
+    }
 
 
     return (
@@ -24,8 +35,8 @@ const ItemDetail = ({ tittle, description, price, pictureUrl, stock }) => {
                     <p className="card-text">Precio: $ {price}</p>
                     <p className="card-text">Stock: {stock}</p>
                     <div className="d-grid gap-2">
-                    { cantidad > 0 ?  <Link to='/Cart'> <button type="button" class="btn btn-danger">Ir al carrito</button></Link> :
-                    <Counter stock={stock} initial={0} onAdd={ShowTheCart}/>}
+                    { isInCart(id) ?  <Link to='/Cart'> <button type="button" class="btn btn-danger">Ir al carrito</button></Link> :
+                    <Counter stock={stock} initial={0} onAdd={handleAdd}/>}
                     </div>
                 </div>
         </div>
