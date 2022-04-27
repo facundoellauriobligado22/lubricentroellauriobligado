@@ -1,11 +1,23 @@
-import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom'
 import { useParams } from "react-router-dom";
+import { firestoreDb } from '../../Services/firebase';
+import { useEffect, useState } from 'react';
+import { getDocs, collection } from 'firebase/firestore'
 
 const NavBar = () => {
 
+    const [categories, setCategories] = useState([])
     const { categoryId } = useParams
+
+    useEffect(() => {
+        getDocs(collection(firestoreDb, 'categories')).then(response => {
+            const categories = response.docs.map(doc => {
+                return { id: doc.id, ...doc.data() }
+            })
+            setCategories(categories)
+        })
+    })
     return (
         <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark">
             <div className="container-fluid">
@@ -36,6 +48,9 @@ const NavBar = () => {
                                 <a className="nav-link" href="#">Servicios</a>
                             </Link>
                         </li>
+                        {/* {categories.map(cat => <Link key={cat.id} to={`/category/${cat.id}`}
+                            className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}
+                        >{cat.description}</Link>)} */}
                     </ul>
                 </div>
 
