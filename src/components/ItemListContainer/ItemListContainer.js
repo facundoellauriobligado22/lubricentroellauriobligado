@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import { getProducts } from "../../asynmock";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom";

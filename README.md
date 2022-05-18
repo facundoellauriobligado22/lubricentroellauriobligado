@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+## LubricentroWere
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Es un proyecto creado y destinado a aquellos lubricentros que necesiten vender sus productos y servicios.
 
-## Available Scripts
+## Clonar repositorio
 
-In the project directory, you can run:
+Ejecutar en la consola git clone https://github.com/facundoellauriobligado22/lubricentroellauriobligado.git
 
-### `npm start`
+## Cargar .env
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Se adjuntará un archivo txt el cual se debera copiar lo que contiene y pegar en un archivo en la carpeta raiz con el nombre ".env" para que funcione FireBase.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Ejecutar la aplicación
 
-### `npm test`
+Ejecutar en la consola el comando npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologias utilizadas
 
-### `npm run build`
+* React JS
+* HTML
+* JavaScript
+* CSS
+* Firebase (como backend y Base de datos)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Funcionamiento
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Al momento de cargar la Página Principal nos encontramos con un NavBar el cual contiene el nombre de la Pagina "LubricentroWere" el cual nos redirige al HomePage, además se encuentran los botones de inicio, aceites, filtros, servicios y un boton de carrito. El primero nos redirige al HomePage el cual contiene todos los productos disponibles, el segundo nos filtra los productos solo por Aceites, el tercero nos nos filtra los productos solo por Filtros, el cuarto nos muestra los servicios disponibles, y por último el boton de Cart nos redirigue a nuestro carrito con los elementos seleccionados.
+Ya posicionados dentro de nuestros productos podremos acceder a sus detalles presionando "Ver detalle del producto" y cuando ingresamos al detalle podremos seleccionar la cantidad que deseamos comprar y luego agregar al carrito. Luego nos aparece un boton el cual si lo presionamos nos redirige al carrito para finalizar nuestra compra.
+Ya en el carrito podremos agregar otros productos o finalizar nuestra compra llenando el formulario con nuestros datos para poder generar una orden de compra.
